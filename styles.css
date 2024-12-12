@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b713e0, #23d3d3); /* Added a third color
+   for more depth */
+    background-size: 400% 400%; /* Make the gradient larger for smooth animation
+   */
+    animation: gradientAnimation 10s ease infinite; /* Animated gradient */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+   }
+   /* Create the animated gradient effect */
+   @keyframes gradientAnimation {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+   }
+   100% {
+   background-position: 0% 50%;
+   }
+  }
+  /* Header Styling */
+  header {
+   text-align: center;
+   padding: 20px 0;
+   background: rgba(0, 0, 0, 0.3);
+   color: #fff;
+   font-size: 2rem;
+  }
+  /* Main Container */
+  main {
+   flex: 1;
+   width: 100%;
+   max-width: 600px;
+   margin: 20px auto;
+   background: rgba(255, 255, 255, 0.9); /* Slightly transparent white
+  background for a soft look */
+   color: #333;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   box-sizing: border-box;
+  }
+  /* Form Layout Adjustments */
+  form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%;
+  }
+  form label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #333;
+   width: 100%;
+   font-size: 16px;
+  }
+  form input, form select, form textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 16px;
+   box-sizing: border-box;
+   max-width: 400px;
+   display: inline-block;
+  }
+  form button {
+   display: block;
+   width: 100%;
+   background: #c42c59;
+   color: white;
+   font-size: 1.2rem;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 15px;
+   transition: background 0.3s;
+   max-width: 400px;
+  }
+  form button:hover {
+   background: #a22b50;
+  }
+  /* Footer Styles */
+  footer {
+   text-align: center;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.7);
+   color: #fff;
+   font-size: 1.1rem;
+   width: 100%;
+  }
+  /* Dialog Box Styles */
+  .dialog-box {
+   display: none;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #fff;
+   color: #333;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   text-align: center;
+   z-index: 1000;
+  }
+  .dialog-box button {
+   background: #569ff1;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   margin-top: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+  }

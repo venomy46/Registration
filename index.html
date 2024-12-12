@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Online Registration</title>
+ <link rel="stylesheet" href="styles.css">
+ <style>
+ /* Embedded styling for demonstration, can be moved to styles.css */
+ body {
+ font-family: Arial, sans-serif;
+ background: linear-gradient(135deg, #2995dd, #8758df);
+ color: #fff;
+ margin: 0;
+ padding: 0;
+ }
+ header {
+ text-align: center;
+ padding: 20px;
+ background: rgba(0, 0, 0, 0.2);
+ }
+ h1 {
+ font-size: 2.5rem;
+ margin: 0;
+ color: #fff;
+ }
+ main {
+ max-width: 500px;
+ margin: 30px auto;
+ background: #ffffff;
+ color: #333;
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+ form {
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ }
+ label {
+ font-weight: bold;
+ font-size: 1.1rem;
+ }
+ input, select, textarea, button {
+ width: 100%;
+ padding: 10px;
+ font-size: 1rem;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+ }
+ input:focus, select:focus, textarea:focus {
+ border-color: #2575fc;
+ outline: none;
+ box-shadow: 0 0 5px rgba(73, 127, 221, 0.5);
+ }
+ button {
+ background: #2575fc;
+ color: white;
+ border: none;
+ cursor: pointer;
+ font-size: 1.2rem;
+ font-weight: bold;
+ transition: background 0.3s ease;
+ }
+ button:hover {
+ background: #bc31df;
+ }
+ footer {
+ text-align: center;
+ padding: 10px;
+ margin-top: 20px;
+ font-size: 0.9rem;
+ color: #ddd;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>Online Registration Form</h1>
+ </header>
+ <main>
+ <form id="registrationForm" method="POST" action="process.php">
+ <label for="name">Name:</label>
+ <input type="text" id="name" name="name" placeholder="Enter your full name"
+required>
+
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" placeholder="Enter your email
+address" required>
+
+ <label for="phone">Phone:</label>
+ <input type="tel" id="phone" name="phone" placeholder="Enter your phone
+number" required>
+
+ <label for="gender">Gender:</label>
+ <select id="gender" name="gender" required>
+ <option value="">Select your gender</option>
+ <option value="Male">Male</option>
+ <option value="Female">Female</option>
+ <option value="Other">Other</option>
+ </select>
+
+ <label for="message">Message:</label>
+ <textarea id="message" name="message" rows="4" placeholder="Your
+message"></textarea>
+
+ <button type="submit">Submit</button>
+ </form>
+ </main>
+ <footer>
+ &copy; 2024 Online Registration. All Rights Reserved.
+ </footer>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+   // Example script for form interaction
+ $(document).ready(function () {
+ $('#registrationForm').submit(function (event) {
+ event.preventDefault();
+ alert('Thank you for registering!');
+ this.submit();
+ });
+ });
+ </script>
+</body>
+</html>
